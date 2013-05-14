@@ -281,7 +281,19 @@ Let's create a shortcut so we can launch Sublime Text from the command-line:
 
 Now I can open a file with `$ subl myfile.py` or start a new project in the current directory with `$ subl .`. Pretty cool.
 
-Sublime Text is very extensible. For now we'll leave it like that, we already have a solid installation. To add more in the future, a good place to start would be to install the [Sublime Package Control](http://wbond.net/sublime_packages/package_control/installation).
+## Sublime Text Packages to install:
+Install the [Sublime Package Control](http://wbond.net/sublime_packages/package_control/installation).
+
+-Dust
+-Sass
+-Chai completions
+-Chef
+-CoffeeLinter
+-Backbone
+-Backbone Marionette
+-Color Highlighter
+-Emmet
+-Sublime Linter
 
 ## Python
 
