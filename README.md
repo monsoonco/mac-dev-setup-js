@@ -1,6 +1,6 @@
 # Mac OS X Dev Setup
 
-This document describes how I set up my developer environment on a new MacBook or iMac. We will set up [Python](http://www.python.org/), [Node](http://nodejs.org/) (JavaScript), and [Ruby](http://www.ruby-lang.org/) environments, mainly for Python and JavaScript development. Even if you don't program in all three, it is good to have them as many command-line tools use one of them. As you read  and follow these steps, feel free to send me any feedback or comments you may have.
+This document describes how I set up my developer environment on a new MacBook or iMac. We will set up [Python](http://www.python.org/), [Node](http://nodejs.org/) (JavaScript), and [Ruby](http://www.ruby-lang.org/) environments, mainly for JavaScript development. Even if you don't program in all three, it is good to have them as many command-line tools use one of them. As you read  and follow these steps, feel free to send me any feedback or comments you may have.
 
 The document assumes you are new to Mac. The steps below were tested on **OS X Mountain Lion**.
 
@@ -17,9 +17,6 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [Git](#git)
 - [Sublime Text](#sublime-text)
 - [Python](#python)
-- [Virtualenv](#virtualenv)
-- [IPython](#ipython)
-- [Numpy and Scipy](#numpy-and-scipy)
 - [MySQL](#mysql)
 - [Node.js](#nodejs)
 - [RVM and Ruby](#rvm-and-ruby)
@@ -119,6 +116,14 @@ Homebrew keeps older versions of packages installed, in case you want to roll ba
 To see what you have installed (with their version numbers):
 
     $ brew list --versions
+
+## Bash Completion
+
+    $ brew install bash-completion
+
+## Use OSX Finder Quicklook to preview all plain text files
+
+- [OSX Finder Quicklook](https://coderwall.com/p/dlithw)
 
 ## Consolas
 
@@ -325,100 +330,6 @@ To uninstall a package:
 
     $ pip uninstall <package>
 
-## Virtualenv
-
-[Virtualenv](http://www.virtualenv.org/) is a tool that creates an isolated Python environment for each of your projects. For a particular project, instead of installing required packages globally, it is best to install them in an isolated folder in the project (say a folder named `venv`), that will be managed by virtualenv.
-
-The advantage is that different projects might require different versions of packages, and it would be hard to manage that if you install packages globally. It also allows you to keep your global `/usr/local/lib/python2.7/site-packages` folder clean, containing only critical or big packages that you always need (like IPython, Numpy).
-
-### Install
-
-To install virtualenv, simply run:
-
-    $ pip install virtualenv
-
-### Usage
-
-Let's say you have a project in a directory called `myproject`. To set up virtualenv for that project:
-
-    $ cd myproject/
-    $ virtualenv venv --distribute
-    
-If you want your virtualenv to also inherit globally installed packages (like IPython or Numpy mentioned above), use:
-
-    $ virtualenv venv --distribute --system-site-packages
-
-These commands create a `venv` subdirectory in your project where everything is installed. You need to **activate** it first though (in every terminal where you are working on your project):
-
-    $ source venv/bin/activate
-    
-You should see a `(venv)` appear at the beginning of your terminal prompt indicating that you are working inside the virtualenv. Now when you install something:
-
-    $ pip install <package>
-
-It will get installed in the `venv` folder, and not conflict with other projects.
-
-**Important**: Remember to add `venv` to your project's `.gitignore` file so you don't include all of that in your source code!
-
-As mentioned earlier, I like to install big packages (like Numpy), or packages I always use (like IPython) globally. All the rest I install in a virtualenv.
-
-## IPython
-
-[IPython](http://ipython.org/) is an awesome project which provides a much better Python shell than the one you get from running `$ python` in the command-line. It has many cool functions (running Unix commands from the Python shell, easy copy & paste, creating Matplotlib charts in-line, etc.) and I'll let you refer to the [documentation](http://ipython.org/ipython-doc/stable/index.html) to discover them.
-
-### Install
-
-Before we install IPython, we'll need to get some dependencies. Run the following:
-
-    $ brew update # Always good to do
-    $ brew install zeromq # Necessary for pyzmq
-    $ brew install pyqt # Necessary for the qtconsole
-    
-It may take a few minutes to build these.
-
-Once it's done, we can install IPython with all the available options:
-
-    $ pip install ipython[zmq,qtconsole,notebook,test]
-
-### Usage
-
-You can launch IPython from the command line with `$ ipython`, but what's more interesting is to use its [QT Console](http://ipython.org/ipython-doc/stable/interactive/qtconsole.html). Launch the QT Console by running:
-
-    $ ipython qtconsole
-    
-You can also customize the font it uses:
-
-    $ ipython qtconsole --ConsoleWidget.font_family="Consolas" --ConsoleWidget.font_size=13
-    
-And since I'm lazy and I don't want to type or copy & paste that all the time, I'm going to create an alias for it. Create a `.extra` text file in your home directory with `$ subl ~/.extra` (I've set up `.bash_profile` to load `.extra`), and add the following line:
-
-```bash
-alias ipy='ipython qtconsole --ConsoleWidget.font_family="Consolas" --ConsoleWidget.font_size=13'
-```
-    
-Open a fresh terminal. Now when you run `$ ipy`, it will launch the QT Console with your configured options.
-
-To use the in-line Matplotlib functionality (nice for scientific computing), run `$ ipy --pylab=inline`.
-
-## Numpy and Scipy
-
-The [Numpy](http://numpy.scipy.org/) and [Scipy](http://www.scipy.org/SciPy) scientific libraries for Python are always a little tricky to install from source because they have all these dependencies they need to build correctly. Luckily for us, [Samuel John](http://www.samueljohn.de/) has put together some [Homebrew formulae](https://github.com/samueljohn/homebrew-python) to make it easier to install these Python libraries.
-
-First, grab the special formulae (which are not part of Homebrew core):
-
-    $ brew tap samueljohn/python
-    $ brew tap homebrew/science
-    
-Then, install the `gfortran` dependency which we will need to build the libraries:
-
-    $ brew install gfortran
-    
-Finally, you can install Numpy and Scipy with:
-
-    $ brew install numpy
-    $ brew install scipy
-    
-(It may take a few minutes to build.)
 
 ## MySQL
 
@@ -595,6 +506,12 @@ I mainly use Ruby for the CSS pre-processor [Compass](http://compass-style.org/)
 
     $ gem install compass --no-rdoc --no-ri
 
+## Gems to install:
+
+    $ gem install compass --no-rdoc --no-ri
+    $ gem install berkshelf --no-rdoc --no-ri
+    $ gem install chef --no-rdoc --no-ri
+
 ## Heroku
 
 [Heroku](http://www.heroku.com/), if you're not already familiar with it, is a [Platform-as-a-Service](http://en.wikipedia.org/wiki/Platform_as_a_service) (PaaS) that makes it really easy to deploy your apps online. There are other similar solutions out there, but Heroku was among the first and is currently the most popular. Not only does it make a developer's life easier, but I find that having Heroku deployment in mind when building an app forces you to follow modern app development [best practices](http://www.12factor.net/).
@@ -690,18 +607,18 @@ I'll let you refer to Redis' [documentation](http://redis.io/documentation) or o
 
 ## Projects folder
 
-This really depends on how you want to organize your files, but I like to put all my version-controlled projects in `~/Projects`. Other documents I may have, or things not yet under version control, I like to put in `~/Dropbox` (if you have Dropbox installed), or `~/Documents`.
+This really depends on how you want to organize your files, but I like to put all my version-controlled projects in `~/Projects`. Other documents I may have, or things not yet under version control, I like to put in `~/Dropbox` (if you have Dropbox installed), or `~/Code`.
 
 ## Apps
 
-Here is a quick list of some apps I use, and that you might find useful as well:
+Other apps to download:
 
+- [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
+- [Vagrant](http://www.vagrantup.com/): Create and configure lightweight, reproducible, and portable development environments.
+- [Yeoman](http://yeoman.io/): Follow the download instructions. You should already have grunt, but you want yeoman and bower too.
 - [Dropbox](https://www.dropbox.com/): File syncing to the cloud. I put all my documents in Dropbox. It syncs them to all my devices (laptop, mobile, tablet), and serves as a backup as well! **(Free for 2GB)**
 - [Google Drive](https://drive.google.com/): File syncing to the cloud too! I use Google Docs a lot to collaborate with others (edit a document with multiple people in real-time!), and sometimes upload other non-Google documents (pictures, etc.), so the app comes in handy for that. **(Free for 5GB)**
-- [1Password](https://agilebits.com/onepassword): Allows you to securely store your login and passwords. Even if you only use a few different passwords (they say you shouldn't!), this is really handy to keep track of all the accounts you sign up for! Also, they have a mobile app so you always have all your passwords with you (syncs with Dropbox). A little pricey though. There are free alternatives. **($50 for Mac app, $18 for iOS app)**
-- [Marked](http://markedapp.com/): As a developer, most of the stuff you write ends up being in [Markdown](http://daringfireball.net/projects/markdown/). In fact, this `README.md` file (possibly the most important file of a GitHub repo) is indeed in Markdown, written in Sublime Text, and I use Marked to preview the results everytime I save. **($4)**
-- [Path Finder](http://cocoatech.com/pathfinder/): I love OSX, it's Unix so great for developers, and all of it just works and looks pretty! Only thing I "miss" from Windows (OMG what did he say?), is a decent file explorer. I think Finder is a pain to use. So I gladly paid for this alternative, but I understand others might find it expensive just to not have to use Finder. **($40)**
-- [Evernote](https://evernote.com/): If I don't write something down, I'll forget it. As a developer, you learn so many new things every day, and technology keeps changing, it would be insane to want to keep it all in your head. So take notes, sync them to the cloud, and have them on all your devices. To be honest, I switched to [Simplenote](http://simplenote.com/) because I only take text notes, and I got tired of Evernote putting extra spaces between paragraphs when I copy & pasted into other applications. Simplenote is so much better for text notes (and it supports Markdown!). **(Both are free)**
-- [Moom](http://manytricks.com/moom/): Don't waste time resizing and moving your windows. Moom makes this very easy. **($10)**
-
-
+- [Dillinger](http://dillinger.io/): Dillinger is a free, open source markdown editor in the browser. Use the hosted app or download it yourself.
+- Spaces: Multiple desktop feature.  Support page for OS X 10.6 [here](http://support.apple.com/kb/ht1624)
+- [Quicksilver](http://qsapp.com): Application hot-launching.  It's currently my preferred app, but I hear Alfred is pretty awesome, too.  Just haven't gotten around to trying it out yet
+- [SizeUp](http://www.irradiatedsoftware.com/sizeup/): A window management tool.  Maps shortcuts that arrange your windows into neat little halves/quadrants/etc.  It's a paid app with an unlimited trial period, the caveat being that it will bug you with a "Buy a license prompt" every so often.
