@@ -11,19 +11,19 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [Google Chrome](#google-chrome)
 - [iTerm2](#iterm2)
 - [Homebrew](#homebrew)
-- [Consolas](#consolas)
 - [Beautiful terminal](#beautiful-terminal)
 - [iTerm2](#iterm2)
 - [Git](#git)
 - [Sublime Text](#sublime-text)
 - [Python](#python)
-- [MySQL](#mysql)
 - [Node.js](#nodejs)
+- [Ruby and rbenv](#ruby-and-rbenv)
 - [RVM and Ruby](#rvm-and-ruby)
 - [Heroku](#heroku)
-- [MongoDB](#mongodb)
-- [Redis](#redis)
 - [Projects folder](#projects-folder)
+- [Vagrant](#vagrant)
+- [Virtual Box](#virtual-box)
+- [Adobe Apps](#adobe-apps)
 - [Apps](#apps)
 
 ## System update
@@ -125,24 +125,6 @@ To see what you have installed (with their version numbers):
 
 - [OSX Finder Quicklook](https://coderwall.com/p/dlithw)
 
-## Consolas
-
-I really like the Consolas font for coding. Being a Microsoft (!) font, it is not installed by default. Since we're going to be looking at a lot of terminal output and code, let's install it now.
-
-There are two ways we can install it. If you bought **Microsoft Office for Mac**, install that and Consolas will be installed as well.
-
-If you don't have Office, follow these steps:
-
-    $ brew install cabextract
-    $ cd ~/Downloads
-    $ mkdir consolas
-    $ cd consolas
-    $ curl -O http://download.microsoft.com/download/f/5/a/f5a3df76-d856-4a61-a6bd-722f52a5be26/PowerPointViewer.exe
-    $ cabextract PowerPointViewer.exe
-    $ cabextract ppviewer.cab
-    $ open CONSOLA*.TTF
-
-And click **Install Font**. Thanks to Alexander Zhuravlev for his [post](http://blog.ikato.com/post/15675823000/how-to-install-consolas-font-on-mac-os-x).
 
 ## Beautiful terminal
 
@@ -279,7 +261,7 @@ Let's create a shortcut so we can launch Sublime Text from the command-line:
     $ mkdir bin
     $ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
-Now I can open a file with `$ subl myfile.py` or start a new project in the current directory with `$ subl .`. Pretty cool.
+Now I can open a file with `$ subl myfile.py` or start a new project in the current directory with `$ subl .`. Pretty cool. (Note: the path to the apps shared support folder will change depending on the version of sublime.)
 
 ## Sublime Text Packages to install:
 Install the [Sublime Package Control](http://wbond.net/sublime_packages/package_control/installation).
@@ -343,67 +325,23 @@ To uninstall a package:
     $ pip uninstall <package>
 
 
-## MySQL
+## Node.js
+
+### Node Version Manager ([NVM](https://github.com/creationix/nvm))
+
+Simple bash script to manage multiple active node.js versions
 
 ### Install
 
-We will install [MySQL](http://www.mysql.com/) using Homebrew, which will also install some header files needed for MySQL bindings in different programming languages (MySQL-Python for one).
+If you have git installed, then just clone the repo (More info here: [https://github.com/creationix/nvm#manual-install](https://github.com/creationix/nvm#manual-install):
 
-To install, run:
+    git clone https://github.com/creationix/nvm.git ~/.nvm
 
-    $ brew update # Always good to do
-    $ brew install mysql
+To activate nvm, you need to source it from your bash shell
 
-As you can see in the ouput from Homebrew, before we can use MySQL we first need to set it up with:
+    source ~/.nvm/nvm.sh
 
-    $ unset TMPDIR
-    $ mkdir /usr/local/var
-    $ mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
-
-### Usage
-
-To start the MySQL server, use the `mysql.server` tool:
-
-    $ mysql.server start
-    
-To stop it when you are done, run:
-
-    $ mysql.server stop
-    
-You can see the different commands available for `mysql.server` with:
-
-    $ mysql.server --help
-    
-To connect with the command-line client, run:
-
-    $ mysql -uroot
-    
-(Use `exit` to quit the MySQL shell.)
-
-**Note**: By default, the MySQL user `root` has no password. It doesn't really matter for a local development database. If you wish to change it though, you can use `$ mysqladmin -u root password 'new-password'`.
-
-### MySQL Workbench
-
-In terms of a GUI client for MySQL, I'm used to the official and free [MySQL Workbench](http://www.mysql.com/products/workbench/). But feel free to use whichever you prefer.
-
-You can find the MySQL Workbench download [here](http://www.mysql.com/downloads/workbench/). (**Note**: It will ask you to sign in, you don't need to, just click on "No thanks, just start my download!" at the bottom.)
-
-## Node.js
-
-Install [Node.js](http://nodejs.org/) with Homebrew:
-
-    $ brew update
-    $ brew install node
-    
-The formula also installs the [npm](https://npmjs.org/) package manager. However, as suggested by the Homebrew output, we need to add `/usr/local/share/npm/bin` to our path so that npm-installed modules with executables will have them picked up.
-
-To do so, add this line to your `~/.path` file, before the `export PATH` line:
-
-```bash
-PATH=/usr/local/share/npm/bin:$PATH
-```
-        
-Open a new terminal for the `$PATH` changes to take effect.
+I always add this line to my ~/.bashrc or ~/.profile file to have it automatically sourced upon login. Often I also put in a line to use a specific version of node.
 
 Node modules are installed locally in the `node_modules` folder of each project by default, but there are at least two that are worth installing globally. Those are [CoffeeScript](http://coffeescript.org/) and [Grunt](http://gruntjs.com/):
 
@@ -438,15 +376,22 @@ To uninstall a package:
 
     $ npm uninstall <package>
 
-## RVM and Ruby
+
+
+
+## Ruby and rbenv
 
 Like Python, [Ruby](http://www.ruby-lang.org/) is already installed on Unix systems. But we don't want to mess around with that installation. More importantly, we want to be able to use the latest version of Ruby.
 
 ### Install
 
-When installing Ruby, best practice is to use [RVM](https://rvm.io/) (Ruby Version Manager) which allows you to manage multiple versions of Ruby on the same machine. Installing RVM, as well as the latest version of Ruby, is very easy. Just run:
+When installing Ruby, best practice is to use [rbenv](https://github.com/sstephenson/rbenv) (Ruby Version Manager) which allows you to manage multiple versions of Ruby on the same machine. Follow the steps [here](https://github.com/sstephenson/rbenv#basic-github-checkout) to checkout and install rbenv.
 
-    $ curl -L https://get.rvm.io | bash -s stable --ruby
+Compatibility note: rbenv is incompatible with RVM. Please make sure to fully uninstall RVM and remove any references to it from your shell initialization files before installing rbenv.
+
+
+
+
     
 When it is done, both RVM and a fresh version of Ruby 2.0 are installed. The following line was also automatically added to your `.bash_profile`:
 
@@ -567,70 +512,38 @@ Once the key business is done, you're ready to deploy apps! Heroku has a great [
     
 The [Heroku Dev Center](https://devcenter.heroku.com/) is full of great resources, so be sure to check it out!
 
-## MongoDB
-
-[MongoDB](http://www.mongodb.org/) is a popular [NoSQL](http://en.wikipedia.org/wiki/NoSQL) database.
-
-### Install
-
-Installing it is very easy through Homebrew:
-
-    $ brew update
-    $ brew install mongo
-
-### Usage
-
-In a terminal, start the MongoDB server:
-
-    $ mongod
-
-In another terminal, connect to the database with the Mongo shell using:
-
-    $ mongo
-
-I'll let you refer to MongoDB's [Getting Started](http://docs.mongodb.org/manual/tutorial/getting-started/) guide for more!
-
-## Redis
-
-[Redis](http://redis.io/) is a blazing fast, in-memory, key-value store, that uses the disk for persistence. It's kind of like a NoSQL database, but there are a lot of [cool things](http://oldblog.antirez.com/post/take-advantage-of-redis-adding-it-to-your-stack.html) that you can do with it that would be hard or inefficient with other database solutions. For example, it's often used as session management or caching by web apps, but it has many other uses.
-
-### Install
-
-To install Redis, use Homebrew:
-
-    $ brew update
-    $ brew install redis
-
-### Usage
-
-Start a local Redis server using the default configuration settings with:
-
-    $ redis-server
-
-For advanced usage, you can tweak the configuration file at `/usr/local/etc/redis.conf` (I suggest making a backup first), and use those settings with:
-
-    $ redis-server /usr/local/etc/redis.conf
-
-In another terminal, connect to the server with the Redis command-line interface using:
-
-    $ redis-cli
-
-I'll let you refer to Redis' [documentation](http://redis.io/documentation) or other tutorials for more information.
-
 ## Projects folder
 
 This really depends on how you want to organize your files, but I like to put all my version-controlled projects in `~/Projects`. Other documents I may have, or things not yet under version control, I like to put in `~/Dropbox` (if you have Dropbox installed), or `~/Code`.
+
+
+## Vagrant
+
+[Vagrant](http://www.vagrantup.com/) is open-source software for creating and configuring virtual development environments. It can be considered a wrapper around VirtualBox and configuration management software such as Chef, Salt and Puppet.
+
+[Download](http://downloads.vagrantup.com/) the latest stable version (v1.3.5), open the installer and follow the instructions. 
+
+
+## Virtual Box
+
+Oracle VM [Virtual Box](https://www.virtualbox.org/wiki/Downloads) is a virtualization tool that allows you to create virtual machines on Mac OS X, Linux, or Windows. 
+
+[Download](https://www.virtualbox.org/wiki/Downloads) and start the installer and follow the instructions. 
+
+
+## Adobe Apps
+
+Go to the [Adobe Creative Cloud](https://creative.adobe.com/join/starter) site and set up an account. You'll download the creative cloud app which will allow you to download 30 day trial versions of any application you may need. Monsoon can provide licenses as needed when the trial version of the application has expired. 
 
 ## Apps
 
 Other apps to download:
 
-- [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
-- [Vagrant](http://www.vagrantup.com/): Create and configure lightweight, reproducible, and portable development environments.
+- [HipChat](https://www.hipchat.com/downloads#mac) Group chat and IM for teams. 
 - [Yeoman](http://yeoman.io/): Follow the download instructions. You should already have grunt, but you want yeoman and bower too.
 - [Dropbox](https://www.dropbox.com/): File syncing to the cloud. I put all my documents in Dropbox. It syncs them to all my devices (laptop, mobile, tablet), and serves as a backup as well! **(Free for 2GB)**
 - [Google Drive](https://drive.google.com/): File syncing to the cloud too! I use Google Docs a lot to collaborate with others (edit a document with multiple people in real-time!), and sometimes upload other non-Google documents (pictures, etc.), so the app comes in handy for that. **(Free for 5GB)**
 - [Dillinger](http://dillinger.io/): Dillinger is a free, open source markdown editor in the browser. Use the hosted app or download it yourself.
 - Spaces: Multiple desktop feature.  Support page for OS X 10.6 [here](http://support.apple.com/kb/ht1624)
-- [Quicksilver](http://qsapp.com): Application hot-launching.  It's currently my preferred app, but I hear Alfred is pretty awesome, too.  Just haven't gotten around to trying it out yet
+- [Alfred](http://www.alfredapp.com/): Application hot-launching. Open with Option + Space and start typing what you're looking for. Does lots of other cool stuff. 
 - [SizeUp](http://www.irradiatedsoftware.com/sizeup/): A window management tool.  Maps shortcuts that arrange your windows into neat little halves/quadrants/etc.  It's a paid app with an unlimited trial period, the caveat being that it will bug you with a "Buy a license prompt" every so often.
