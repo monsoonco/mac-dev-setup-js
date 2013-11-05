@@ -18,7 +18,6 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [Python](#python)
 - [Node.js](#nodejs)
 - [Ruby and rbenv](#ruby-and-rbenv)
-- [RVM and Ruby](#rvm-and-ruby)
 - [Heroku](#heroku)
 - [Projects folder](#projects-folder)
 - [Vagrant](#vagrant)
@@ -347,8 +346,10 @@ Node modules are installed locally in the `node_modules` folder of each project 
 
     $ npm install -g coffee-script
     $ npm install -g grunt-cli
+    $ npm install -g bower
+    $ npm install -g yo
 
-### Npm usage
+### NPM usage
 
 To install a package:
 
@@ -376,11 +377,7 @@ To uninstall a package:
 
     $ npm uninstall <package>
 
-
-
-
 ## Ruby and rbenv
-
 Like Python, [Ruby](http://www.ruby-lang.org/) is already installed on Unix systems. But we don't want to mess around with that installation. More importantly, we want to be able to use the latest version of Ruby.
 
 ### Install
@@ -389,43 +386,9 @@ When installing Ruby, best practice is to use [rbenv](https://github.com/sstephe
 
 Compatibility note: rbenv is incompatible with RVM. Please make sure to fully uninstall RVM and remove any references to it from your shell initialization files before installing rbenv.
 
+You are encouraged to install `ruby-build` using `brew install ruby-build` for managing the installation of new versions of ruby.  Using `ruby-build` and `bash-completion`, installing a version of Ruby is as easy as typing `rbenv install`, then pressing tab twice to get a list of all available versions.
 
-
-
-    
-When it is done, both RVM and a fresh version of Ruby 2.0 are installed. The following line was also automatically added to your `.bash_profile`:
-
-```bash
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-```
-
-I prefer to move that line to the `.extra` file, keeping my `.bash_profile` clean. I suggest you do the same.
-
-After that, start a new terminal and run:
-
-    $ type rvm | head -1
-    
-You should get the output `rvm is a function`.
-
-### Usage
-
-The following command will show you which versions of Ruby you have installed:
-
-    $ rvm list
-
-The one that was just installed, Ruby 1.9, should be set as default. When managing multiple versions, you switch between them with:
-
-    $ rvm use system # Switch back to system install (1.8)
-    $ rvm use 1.9.3 --default # Switch to 1.9.3 and sets it as default
-
-Run the following to make sure the version you want is being used (in our case, the just-installed Ruby 1.9.3):
-
-    $ which ruby
-    $ ruby --version
-
-You can install another version with:
-
-    $ rvm install 1.9.3
+*As of 5 Nov 2013, the recommended major version of Ruby is 1.9.3.*
     
 [RubyGems](http://rubygems.org/), the Ruby package manager, was also installed:
 
