@@ -131,6 +131,8 @@ Since we spend so much time in the terminal, we should try to make it a more ple
 
 Let's go ahead and start by changing the font. In **iTerm > Preferences...**, under the tab **Profiles**, section **Text**, change both fonts to **Consolas 13pt**.
 
+(Note: you may have to install Consolas, instructions for doing so can be found [here](http://www.zjhzxhz.com/2014/01/install-microsofts-consolas-font-on-mac-os-x/))
+
 Now let's add some color. I'm a big fan of the [Solarized](http://ethanschoonover.com/solarized) color scheme. It is supposed to be scientifically optimal for the eyes. I just find it pretty.
 
 Scroll down the page and download the latest version. Unzip the archive. In it you will find the `iterm2-colors-solarized` folder with a `README.md` file, but I will just walk you through it here:
@@ -142,7 +144,7 @@ Scroll down the page and download the latest version. Unzip the archive. In it y
 
 Not a lot of colors yet. We need to tweak a little bit our Unix user's profile for that. This is done (on OS X and Linux), in the `~/.bash_profile` text file (`~` stands for the user's home directory).
 
-We'll come back to the details of that later, but for now, just download the files [.bash_profile](/nicolahery/mac-dev-setup/blob/master/.bash_profile), [.bash_prompt](/nicolahery/mac-dev-setup/blob/master/.bash_prompt), [.aliases](/nicolahery/mac-dev-setup/blob/master/.aliases) attached to this document into your home directory (`.bash_profile` is the one that gets loaded, I've set it up to call the others):
+We'll come back to the details of that later, but for now, just download the files [.bash_profile](https://github.com/nicolahery/mac-dev-setup/blob/master/.bash_profile), [.bash_prompt](https://github.com/nicolahery/mac-dev-setup/blob/master/.bash_prompt), [.aliases](https://github.com/nicolahery/mac-dev-setup/blob/master/.aliases) attached to this document into your home directory (`.bash_profile` is the one that gets loaded, I've set it up to call the others):
 
     $ cd ~
     $ curl -O https://raw.github.com/jkatsnelson/mac-dev-setup-js/master/.bash_profile
@@ -484,7 +486,7 @@ This really depends on how you want to organize your files, but I like to put al
 
 [Vagrant](http://www.vagrantup.com/) is open-source software for creating and configuring virtual development environments. It can be considered a wrapper around VirtualBox and configuration management software such as Chef, Salt and Puppet.
 
-[Download](http://downloads.vagrantup.com/) the latest stable version (v1.3.5), open the installer and follow the instructions. 
+[Download](http://www.vagrantup.com/downloads.html) the latest stable version (v1.3.5), open the installer and follow the instructions. 
 
 
 ## Virtual Box
