@@ -484,7 +484,7 @@ This really depends on how you want to organize your files, but I like to put al
 
 [Vagrant](http://www.vagrantup.com/) is open-source software for creating and configuring virtual development environments. It can be considered a wrapper around VirtualBox and configuration management software such as Chef, Salt and Puppet.
 
-[Download](http://downloads.vagrantup.com/) the latest stable version (v1.3.5), open the installer and follow the instructions. 
+[Download](http://www.vagrantup.com/downloads.html) the latest stable version (v1.3.5), open the installer and follow the instructions. 
 
 
 ## Virtual Box
