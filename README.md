@@ -428,11 +428,18 @@ I mainly use Ruby for the CSS pre-processor [Compass](http://compass-style.org/)
 
     $ gem install compass --no-rdoc --no-ri
 
-## Gems to install:
+### Gems to install:
 
     $ gem install compass --no-rdoc --no-ri
     $ gem install berkshelf --no-rdoc --no-ri
     $ gem install chef --no-rdoc --no-ri
+
+### Install rbenv-gem-rehash
+    Never run rbenv rehash again. This rbenv plugin automatically runs rbenv rehash every time you install or uninstall a gem. Make sure you have rbenv 0.4.0 or later, then run:
+
+    $ git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
+
+    More details [here](https://github.com/sstephenson/rbenv-gem-rehash).
 
 ## Heroku
 
