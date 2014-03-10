@@ -162,7 +162,7 @@ Now we have a terminal we can work with!
 
 ## Dotfile source control
 
-In case of emergency, it is recommended that you backup your workstation configuration dotfiles, as explained [here](https://github.com/palimpsests/dotfiles) (ignore the 'Setting up a new Mac section').
+It is recommended that you place your workstation configuration dotfiles under source control, as explained [here](https://github.com/palimpsests/dotfiles) (ignore the 'Setting up a new Mac section').
 
 ## Git
 
