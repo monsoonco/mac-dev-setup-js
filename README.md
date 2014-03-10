@@ -12,6 +12,7 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [iTerm2](#iterm2)
 - [Homebrew](#homebrew)
 - [Beautiful terminal](#beautiful-terminal)
+- [Dotfile source control](#dotfile-source-control)
 - [iTerm2](#iterm2)
 - [Git](#git)
 - [Sublime Text](#sublime-text)
@@ -159,7 +160,7 @@ Now we have a terminal we can work with!
 
 (Thanks to Mathias Bynens for his awesome [dotfiles](https://github.com/mathiasbynens/dotfiles).)
 
-## Dotfiles source control
+## Dotfile source control
 
 In case of emergency, it is recommended that you backup your workstation configuration dotfiles, as explained [here](https://github.com/palimpsests/dotfiles) (ignore the 'Setting up a new Mac section').
 
