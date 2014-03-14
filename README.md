@@ -389,7 +389,7 @@ Like Python, [Ruby](http://www.ruby-lang.org/) is already installed on Unix syst
 
 ### Install
 
-When installing Ruby, best practice is to use [rbenv](https://github.com/sstephenson/rbenv) (Ruby Version Manager) which allows you to manage multiple versions of Ruby on the same machine. Follow the steps [here](https://github.com/sstephenson/rbenv#basic-github-checkout) to checkout and install rbenv.
+When installing Ruby, best practice is to use [rbenv](https://github.com/sstephenson/rbenv) (Ruby Version Manager) which allows you to manage multiple versions of Ruby on the same machine. Follow the steps [here](https://github.com/sstephenson/rbenv#basic-github-checkout) to checkout and install rbenv. Also, install the [rbenv-gem-rehash](https://github.com/sstephenson/rbenv-gem-rehash) plugin.
 
 Compatibility note: rbenv is incompatible with RVM. Please make sure to fully uninstall RVM and remove any references to it from your shell initialization files before installing rbenv.
 
