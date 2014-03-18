@@ -399,7 +399,14 @@ Compatibility note: rbenv is incompatible with RVM. Please make sure to fully un
 
 You are encouraged to install `ruby-build` using `brew install ruby-build` for managing the installation of new versions of ruby.  Using `ruby-build` and `bash-completion`, installing a version of Ruby is as easy as typing `rbenv install`, then pressing tab twice to get a list of all available versions.
 
-*As of 5 Nov 2013, the recommended major version of Ruby is 1.9.3.*
+For example, install the latest version of 2.0.X:
+
+    $ rbenv install 2.0.X-pXXX
+    
+To use this version globally now run..
+
+    $ rbenv global 2.0.X-pXXX
+
 
 [RubyGems](http://rubygems.org/), the Ruby package manager, was also installed:
 
