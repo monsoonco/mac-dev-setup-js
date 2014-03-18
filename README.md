@@ -347,7 +347,7 @@ To activate nvm, you need to source it from your bash shell
 
     source ~/.nvm/nvm.sh
 
-I always add this line to my ~/.bashrc or ~/.profile file to have it automatically sourced upon login. Often I also put in a line to use a specific version of node.
+I always add this line to my ~/.bashrc or ~/.profile file (you may need to add this line to ~/.bash_profile file instead) to have it automatically sourced upon login. Often I also put in a line to use a specific version of node.
 
 Node modules are installed locally in the `node_modules` folder of each project by default, but there are at least two that are worth installing globally. Those are [CoffeeScript](http://coffeescript.org/) and [Grunt](http://gruntjs.com/):
 
