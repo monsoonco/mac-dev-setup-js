@@ -503,7 +503,7 @@ The [Heroku Dev Center](https://devcenter.heroku.com/) is full of great resource
 
 ## Projects folder
 
-This really depends on how you want to organize your files, but I like to put all my version-controlled projects in `~/Projects`. Other documents I may have, or things not yet under version control, I like to put in `~/Dropbox` (if you have Dropbox installed), or `~/Code`.
+This really depends on how you want to organize your files, but I like to put all my version-controlled projects in `~/Projects`. Other documents I may have, or things not yet under version control, I like to put in `~/Code`.
 
 
 ## Vagrant
@@ -530,7 +530,7 @@ Other apps to download:
 
 - [HipChat](https://www.hipchat.com/downloads#mac) Group chat and IM for teams.
 - [Yeoman](http://yeoman.io/): Follow the download instructions. You should already have grunt, but you want yeoman and bower too.
-- [Dropbox](https://www.dropbox.com/): File syncing to the cloud. I put all my documents in Dropbox. It syncs them to all my devices (laptop, mobile, tablet), and serves as a backup as well! **(Free for 2GB)**
+- [Dropbox](https://www.dropbox.com/): Design shares assets and wireframes and comps with us through Dropbox. You need a dropbox account with your work email.
 - [Google Drive](https://drive.google.com/): File syncing to the cloud too! I use Google Docs a lot to collaborate with others (edit a document with multiple people in real-time!), and sometimes upload other non-Google documents (pictures, etc.), so the app comes in handy for that. **(Free for 5GB)**
 - [Dillinger](http://dillinger.io/): Dillinger is a free, open source markdown editor in the browser. Use the hosted app or download it yourself.
 - Spaces: Multiple desktop feature.  Support page for OS X 10.6 [here](http://support.apple.com/kb/ht1624)
