@@ -158,6 +158,21 @@ At this point you can also change your computer's name, which shows up in this t
 
 Now we have a terminal we can work with!
 
+### Terminal word navigation sanity
+To enable whole-word skipping while holding down alt plus the left or right arrow keys,
+Go to iTerm preferences > Profiles and choose your user profile.
+Then select the 'Keys' tab.
+
+Add the following shortcuts:
+* alt + left arrow
+* Action: send escape sequence
+* Enter the letter 'b' in the text field next to 'Esc +'
+
+* alt + right arrow
+* Action: send escape sequence
+* Enter 'f' in the text field next to 'Esc +'
+
+
 (Thanks to Mathias Bynens for his awesome [dotfiles](https://github.com/mathiasbynens/dotfiles).)
 
 ## Dotfile source control
