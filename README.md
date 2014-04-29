@@ -164,9 +164,11 @@ Go to iTerm preferences > Profiles and choose your user profile.
 Then select the 'Keys' tab.
 
 Add the following shortcuts:
+
 * alt + left arrow
 * Action: send escape sequence
 * Enter the letter 'b' in the text field next to 'Esc +'
+
 
 * alt + right arrow
 * Action: send escape sequence
