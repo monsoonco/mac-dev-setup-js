@@ -163,16 +163,16 @@ To enable whole-word skipping while holding down alt plus the left or right arro
 Go to iTerm preferences > Profiles and choose your user profile.
 Then select the 'Keys' tab.
 
-Add the following shortcuts:
+Add the following two shortcuts:
 
 ```
-alt + left arrow
+Keyboard Shortcut: alt + left arrow
 Action: send escape sequence
 Enter the letter 'b' in the text field next to 'Esc +'
 ```
 
 ```
-alt + right arrow
+Keyboard Shortcut: alt + right arrow
 Action: send escape sequence
 Enter 'f' in the text field next to 'Esc +'
 ```
