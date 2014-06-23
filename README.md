@@ -4,8 +4,6 @@ This document describes how I set up my developer environment on a new MacBook o
 
 The document assumes you are new to Mac. The steps below were tested on **OS X Mountain Lion**.
 
-If you have any comments or suggestions, feel free to give me a shout [on Twitter](https://twitter.com/nicolahery)!
-
 - [System update](#system-update)
 - [System preferences](#system-preferences)
 - [Google Chrome](#google-chrome)
@@ -13,7 +11,6 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [Homebrew](#homebrew)
 - [Beautiful terminal](#beautiful-terminal)
 - [Dotfile source control](#dotfile-source-control)
-- [iTerm2](#iterm2)
 - [Git](#git)
 - [Sublime Text](#sublime-text)
 - [Python](#python)
@@ -25,6 +22,7 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [Virtual Box](#virtual-box)
 - [Adobe Apps](#adobe-apps)
 - [Apps](#apps)
+- [Style guides for additional reading](#style-guides)
 
 ## System update
 
@@ -555,3 +553,10 @@ Other apps to download:
 - Spaces: Multiple desktop feature.  Support page for OS X 10.6 [here](http://support.apple.com/kb/ht1624)
 - [Alfred](http://www.alfredapp.com/): Application hot-launching. Open with Option + Space and start typing what you're looking for. Does lots of other cool stuff.
 - [SizeUp](http://www.irradiatedsoftware.com/sizeup/): A window management tool.  Maps shortcuts that arrange your windows into neat little halves/quadrants/etc.  It's a paid app with an unlimited trial period, the caveat being that it will bug you with a "Buy a license prompt" every so often.
+
+
+## Style Guides
+
+ - [Ruby style guide](https://github.com/bbatsov/ruby-style-guide) Best practices for developing in Ruby
+ - [Rails style guide](https://github.com/bbatsov/rails-style-guide) Complimentary guide on Rails styling (many parts are specific to Rails 4.0+)
+
