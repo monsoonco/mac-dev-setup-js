@@ -312,10 +312,11 @@ Download the following Plain Tasks theme [here]() and add it to your ~/Library/A
 
 Navigate to Preferences -> Package Settings -> Plain Tasks -> Settings - User and update the config file to contain:
 
-```json
-"color_scheme": "Packages/PlainTasks/DarkNotes.tmTheme"
-```
-
+    {
+    ...
+        "color_scheme": "Packages/PlainTasks/DarkNotes.tmTheme"
+    ...
+    }
 
 ## Python
 
