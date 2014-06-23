@@ -292,17 +292,17 @@ Install the [Sublime Package Control](http://wbond.net/sublime_packages/package_
 
 To install individual packages, bring up the Command Palette with Cmd+Shift+P and type "install."  Select "Package Control: Install Package." Once the repositories load search for and install the following packages:
 
--Dust
--Sass
--Chai completions
--Chef
--CoffeeLinter
--Backbone
--Backbone Marionette
--Color Highlighter
--Emmet
--Sublime Linter
--Plain Tasks
+- Dust
+- Sass
+- Chai completions
+- Chef
+- CoffeeLinter
+- Backbone
+- Backbone Marionette
+- Color Highlighter
+- Emmet
+- Sublime Linter
+- Plain Tasks
 
 ## Customize Sublime Text Packages
 
