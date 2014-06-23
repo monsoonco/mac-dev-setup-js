@@ -308,7 +308,7 @@ To install individual packages, bring up the Command Palette with Cmd+Shift+P an
 
 It's recommended to style PlainTasks to somethingmore palatable than the default yellow sticky color. 
 
-Download the following Plain Tasks theme [here]() and add it to your ~/Library/Application Support/Sublime Text 2/Packages/PlainTasks
+Download the following Plain Tasks theme [here](https://github.com/monsoonco/mac-dev-setup-js/blob/master/DarkNotes.tmTheme) and add it to your ~/Library/Application Support/Sublime Text 2/Packages/PlainTasks
 
 Navigate to Preferences -> Package Settings -> Plain Tasks -> Settings - User and update the config file to contain:
 
