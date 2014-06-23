@@ -13,6 +13,7 @@ The document assumes you are new to Mac. The steps below were tested on **OS X M
 - [Dotfile source control](#dotfile-source-control)
 - [Git](#git)
 - [Sublime Text](#sublime-text)
+- [Customize Sublime Text Packages](#customize-sublime-text-packages)
 - [Python](#python)
 - [Node.js](#nodejs)
 - [Ruby and rbenv](#ruby-and-rbenv)
@@ -287,7 +288,9 @@ Let's create a shortcut so we can launch Sublime Text from the command-line:
 Now I can open a file with `$ subl myfile.py` or start a new project in the current directory with `$ subl .`. Pretty cool. (Note: the path to the apps shared support folder will change depending on the version of sublime.)
 
 ## Sublime Text Packages to install:
-Install the [Sublime Package Control](http://wbond.net/sublime_packages/package_control/installation).
+Install the [Sublime Package Control](http://wbond.net/sublime_packages/package_control/installation). 
+
+To install individual packages, bring up the Command Palette with Cmd+Shift+P and type "install."  Select "Package Control: Install Package." Once the repositories load search for and install the following packages:
 
 -Dust
 -Sass
@@ -299,6 +302,20 @@ Install the [Sublime Package Control](http://wbond.net/sublime_packages/package_
 -Color Highlighter
 -Emmet
 -Sublime Linter
+-Plain Tasks
+
+## Customize Sublime Text Packages
+
+It's recommended to style PlainTasks to somethingmore palatable than the default yellow sticky color. 
+
+Download the following Plain Tasks theme [here]() and add it to your ~/Library/Application Support/Sublime Text 2/Packages/PlainTasks
+
+Navigate to Preferences -> Package Settings -> Plain Tasks -> Settings - User and update the config file to contain:
+
+```json
+"color_scheme": "Packages/PlainTasks/DarkNotes.tmTheme"
+```
+
 
 ## Python
 
