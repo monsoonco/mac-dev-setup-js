@@ -384,7 +384,7 @@ I always add this line to my ~/.bashrc or ~/.profile file (you may need to add t
 
 Use nvm to install the latest version of node
 
-    nvm install 0.10.26
+    nvm install 0.10
 
 Node modules are installed locally in the `node_modules` folder of each project by default, but there are at least two that are worth installing globally. Those are [CoffeeScript](http://coffeescript.org/) and [Grunt](http://gruntjs.com/):
 
