@@ -327,6 +327,7 @@ When finished, you should get a summary in the terminal. Running `$ which python
 
 It also installed [Pip]() (and its dependency [Distribute]()), which is the package manager for Python. Let's upgrade them both:
 
+    $ pip install --upgrade setuptools
     $ pip install --upgrade distribute
     $ pip install --upgrade pip
 
