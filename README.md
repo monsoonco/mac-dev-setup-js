@@ -386,7 +386,7 @@ Use nvm to install the latest version of node
 
     nvm install 0.10
 
-Node modules are installed locally in the `node_modules` folder of each project by default, but there are at least two that are worth installing globally. Those are [CoffeeScript](http://coffeescript.org/) and [Grunt](http://gruntjs.com/):
+Node modules are installed locally in the `node_modules` folder of each project by default, but there are at least a few that are worth installing globally. Those are [CoffeeScript](http://coffeescript.org/), [Grunt](http://gruntjs.com/), [Bower](http://bower.io/), and [Yeoman](http://yeoman.io/):
 
     $ npm install -g coffee-script
     $ npm install -g grunt-cli
