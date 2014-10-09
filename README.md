@@ -69,7 +69,7 @@ Package managers make it so much easier to install and update applications (for 
 In the terminal paste the following line
 (without the `$`), hit **Enter**, and follow the steps on the screen:
 
-    $ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+    $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 You'll be prompted to install **Command Line Tools** for **Xcode**. When the installation of Command Line Tools is complete, Homebrew will continue installing.
 
