@@ -561,7 +561,7 @@ Go to the [Adobe Creative Cloud](https://creative.adobe.com/join/starter) site a
 
 Other apps to download:
 
-- [HipChat](https://www.hipchat.com/downloads#mac) Group chat and IM for teams.
+- [Slack](https://slack.com/) Group chat and IM for teams.
 - [Yeoman](http://yeoman.io/): Follow the download instructions. You should already have grunt, but you want yeoman and bower too.
 - [Dropbox](https://www.dropbox.com/): Design shares assets and wireframes and comps with us through Dropbox. You need a dropbox account with your work email.
 - [Google Drive](https://drive.google.com/): File syncing to the cloud too! I use Google Docs a lot to collaborate with others (edit a document with multiple people in real-time!), and sometimes upload other non-Google documents (pictures, etc.), so the app comes in handy for that. **(Free for 5GB)**
