@@ -576,3 +576,10 @@ Other apps to download:
  - [Ruby style guide](https://github.com/bbatsov/ruby-style-guide) Best practices for developing in Ruby
  - [Rails style guide](https://github.com/bbatsov/rails-style-guide) Complimentary guide on Rails styling (many parts are specific to Rails 4.0+)
 
+## Size Up
+ - As with most developers and people that compute, browser management can be a pain. The solution to that is SizeUp.  http://www.irradiatedsoftware.com/sizeup/
+ 
+
+##1Password
+ - With so many accounts needed, how do you keep track of all the passwords?  1Password is the solution.  Each project will have a 1password vault.  If anyone needs to enter a login and password for a project, it's all managed with 1Password.  Download it here https://agilebits.com/onepassword
+
