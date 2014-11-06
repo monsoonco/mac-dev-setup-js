@@ -56,7 +56,7 @@ You can now launch iTerm, through the **Launchpad** for instance.
 
 Let's just quickly change some preferences. In **iTerm > Preferences...**, under the tab **General**, uncheck **Confirm closing multiple sessions** and **Confirm "Quit iTerm2 (Cmd+Q)" command** under the section **Closing**.
 
-In the tab **Profiles**, create a new one with the "+" icon, and rename it to your first name for example. Then, select **Other Actions... > Set as Default**. Finally, under the section **Window**, change the size to something better, like **Columns: 125** and **Rows: 35**.
+In the tab **Profiles**, create a new one with the "+" icon, and rename it to your first name for example. Then, select **Other Actions... > Set as Default**. Under the section **Window**, change the size to something better, like **Columns: 125** and **Rows: 35**. Finally, under the section **Terminal**, check the option **Disable session-initiated printing**, as server logs (Rails in particular) can accidentally emit the print-screen character sequence from time to time. 
 
 When done, hit the red "X" in the upper left (saving is automatic in OS X preference panes). Close the window and open a new one to see the size change.
 
