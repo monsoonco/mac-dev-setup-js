@@ -24,6 +24,9 @@ The document assumes you are new to Mac. The steps below were tested on **OS X M
 - [Adobe Apps](#adobe-apps)
 - [Apps](#apps)
 - [Style guides for additional reading](#style-guides)
+- [Sizeup] (#size-up)
+- [1password] (#1password)
+
 
 ## System update
 
