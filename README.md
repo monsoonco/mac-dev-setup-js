@@ -176,6 +176,13 @@ Action: send escape sequence
 Enter 'f' in the text field next to 'Esc +'
 ```
 
+### Terminal case-insensitivity sanity
+-run this command in your terminal to make unix auto-completion case-insensitive
+```
+$ echo "set completion-ignore-case On" >> ~/.inputrc
+```
+
+
 (Thanks to Mathias Bynens for his awesome [dotfiles](https://github.com/mathiasbynens/dotfiles).)
 
 ## Dotfile source control
