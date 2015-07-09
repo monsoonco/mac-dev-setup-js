@@ -489,6 +489,7 @@ I mainly use Ruby for the CSS pre-processor [Compass](http://compass-style.org/)
 
 ### Gems to install:
 
+    $ gem install bundler --no-rdoc --no-ri
     $ gem install compass --no-rdoc --no-ri
     $ gem install berkshelf --no-rdoc --no-ri
     $ gem install chef --no-rdoc --no-ri
